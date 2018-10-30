@@ -76,7 +76,6 @@ public class Triangle {
     public double getSquare() {
         return (lineAB.getLength() * lineBC.getLength() * sin(getAngleAB())) / 2;
     }
-
     @Override
     public String toString() {
         return "Triangele{"

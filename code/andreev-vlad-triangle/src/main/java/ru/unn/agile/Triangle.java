@@ -6,9 +6,9 @@ import ru.unn.agile.primitives.Point;
 
 import static java.lang.Math.*;
 
-public class Triangle {
-    private Line lineAB;
-    private Line lineBC;
+public class Triangle {                    
+    private Line lineAB;                        
+    private Line lineBC;                      
     private Line lineCA;
 
     public Triangle(final Point pointA,

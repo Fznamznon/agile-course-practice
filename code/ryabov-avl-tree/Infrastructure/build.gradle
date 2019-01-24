@@ -1,0 +1,4 @@
+dependencies {
+    compile project(':ryabov-avl-tree-ViewModel')
+    testCompile project(':ryabov-avl-tree-ViewModel').sourceSets.test.output
+}

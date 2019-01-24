@@ -1,32 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
-<?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import ru.unn.agile.AVL.viewmodel.*?>
 
-<AnchorPane prefHeight="65.0" prefWidth="544.0"
-            xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="ru.unn.agile.AVL.view.AVLTree">
-   <fx:define>
-      <ViewModel fx:id="viewModel" />
-   </fx:define>
-   <children>
-      <Button fx:id="performAction" defaultButton="true" layoutX="471.0" layoutY="5.0"
-              mnemonicParsing="false" text="Do action" AnchorPane.rightAnchor="5.0"
-              AnchorPane.topAnchor="5.0" disable="${viewModel.actionDisabled}" />
-      <ChoiceBox fx:id="actionType" layoutX="30.0" layoutY="42.0" prefWidth="150.0"
-                 AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0"
-                 items="${viewModel.operations}"/>
-      <TextField fx:id="key" layoutX="155.0" layoutY="5.0" prefWidth="150.0"
-                 AnchorPane.leftAnchor="160.0" AnchorPane.topAnchor="5.0" />
-      <TextField fx:id="value" layoutX="300.0" layoutY="2.0" disable="${viewModel.valueDisabled}"
-                 prefWidth="150.0" AnchorPane.leftAnchor="315.0" AnchorPane.topAnchor="5.0" />
-      <Label fx:id="statusText" layoutX="129.0" layoutY="97.0" prefHeight="25.0" prefWidth="460.0"
-             AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="79.0"
-             text="${viewModel.status}" />
-      <Label fx:id="result" layoutX="441.0" layoutY="27.0" prefHeight="25.0" prefWidth="68.0"
-             AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0"
-             text="${viewModel.result}" />
-   </children>
+<AnchorPane prefHeight="171.00009999999747" prefWidth="544.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="ru.unn.agile.AVL.view.AVLTree">
+    <fx:define>
+        <ViewModel fx:id="viewModel" />
+    </fx:define>
+    <children>
+        <Button fx:id="performAction" defaultButton="true" disable="${viewModel.actionDisabled}" mnemonicParsing="false" text="Do action" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+        <ChoiceBox fx:id="actionType" items="${viewModel.operations}" prefWidth="150.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+        <TextField fx:id="key" prefWidth="150.0" AnchorPane.leftAnchor="160.0" AnchorPane.topAnchor="5.0" />
+        <TextField fx:id="value" disable="${viewModel.valueDisabled}" prefWidth="150.0" AnchorPane.leftAnchor="315.0" AnchorPane.topAnchor="5.0" />
+        <Label fx:id="statusText" prefHeight="25.0" prefWidth="460.0" text="${viewModel.status}" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="30.0" />
+        <Label fx:id="result" prefHeight="25.0" prefWidth="68.0" text="${viewModel.result}" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="30.0" />
+        <ScrollPane hbarPolicy="NEVER" prefHeight="102.0001220703125" prefWidth="534.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+            <content>
+                <ListView fx:id="log" prefHeight="103.00000762939453" prefWidth="534.0" />
+            </content>
+        </ScrollPane>
+    </children>
 </AnchorPane>

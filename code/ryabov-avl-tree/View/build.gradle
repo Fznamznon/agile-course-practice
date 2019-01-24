@@ -2,4 +2,5 @@ apply from: rootDir.getAbsolutePath() + '/config/scripts/javafx.plugin'
 
 dependencies {
     compile project(':ryabov-avl-tree-ViewModel')
+    compile project(':ryabov-avl-tree-Infrastructure')
 }

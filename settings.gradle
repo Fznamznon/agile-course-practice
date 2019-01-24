@@ -417,6 +417,8 @@ include "code/ryabov-avl-tree/View"
 project(":code/ryabov-avl-tree/View").name = "ryabov-avl-tree-View"
 include "code/ryabov-avl-tree/ViewModel"
 project(":code/ryabov-avl-tree/ViewModel").name = "ryabov-avl-tree-ViewModel"
+include "code/ryabov-avl-tree/Infrastructure"
+project(":code/ryabov-avl-tree/Infrastructure").name = "ryabov-avl-tree-Infrastructure"
 
 // Kryukova Polina, caesar-cipher
 include "code/caesar-cipher/Model"
